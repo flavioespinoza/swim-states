@@ -56,7 +56,7 @@
 
             let statesList = swimStates.statesList();
 
-            console.log('statesList', statesList);
+            console.log(statesList);
 
             // => [{
             //   "state": "alabama",
@@ -101,7 +101,7 @@
 
             let state = swimStates.stateName('utah');
 
-            console.log('state', state);
+            console.log(state);
 
             // => {
             //   "state": "utah",
@@ -117,6 +117,78 @@
 
         </template>
       </demo-snippet>
+
+      <div class="vertical-section-container centered">
+        <h3>Used with Polymer web component</h3>
+        
+        <demo-snippet>
+          <template>
+
+            <dom-module id="swim-dropdown">
+              <template>
+                <style>
+                  :host {
+                    display: block;
+                  }
+                  paper-item {
+                    font-size: 13px;
+                  }
+                </style>
+
+                <paper-dropdown-menu label="{{placeholder}}" no-label-float="true" on-iron-select="_itemSelected">
+                  <paper-listbox class="dropdown-content">
+                    <template is="dom-repeat" items="{{_statesList}}">
+                      <paper-item>{{item.state}}</paper-item>
+                    </template>
+                  </paper-listbox>
+                </paper-dropdown-menu>
+
+                <!-- Needed to generate states list -->
+                <swim-states></swim-states>
+
+              </template>
+
+              <script>
+                Polymer({
+
+                  is: 'swim-dropdown',
+
+                  properties: {
+                    placeholder: String
+                  },
+
+                  _statesList: function () {
+                    return swimStates.statesList();
+                  },
+
+                  _itemSelected : function(e) {
+
+                    const swimStates = document.querySelector('swim-states');
+                    let statesList = swimStates.statesList();
+                    let selectedItem = e.target.selectedItem;
+
+                    if (selectedItem) {
+                      let state = _.find(statesList, function (obj) {
+                        return obj.state === selectedItem.innerText.toLowerCase();
+                      });
+                      if (state) {
+                        let boundingBox = [
+                          [state.bounding_box.west_longitude, state.bounding_box.south_latitude],
+                          [state.bounding_box.east_longitude, state.bounding_box.north_latitude],
+                        ];
+                        swimMap._fitBounds(boundingBox);
+                      }
+                    }
+
+                  }
+
+                });
+              </script>
+            </dom-module>
+
+
+          </template>
+        </demo-snippet>
 
 
     </div>
