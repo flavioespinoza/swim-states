@@ -27,48 +27,97 @@
     </style>
   </head>
   <body>
+
     <div class="vertical-section-container centered">
-      <h3>Basic swim-states demo</h3>
+    <h3>Set Polymer element as Javascript constant</h3>
+    <demo-snippet>
+      <template>
+
+        <swim-states></swim-states>
+
+        <script>
+
+          const swimStates = document.querySelector('swim-states');
+
+        </script>
+
+      </template>
+    </demo-snippet>
+
+
+  </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Return complete list of states</h3>
       <demo-snippet>
         <template>
 
           <script>
-            // Below is an object model representing each state
-            let obj_model = {
-              "state": "state name",
-              "boundingbox": [
-                ["west longitude", "south latitude"],
-                ["east longitude", "north latitude"]
-              ]
-            }
-          </script>
 
-          <swim-states></swim-states>
-
-          <script>
-            const swimStates = document.querySelector('swim-states');
             let statesList = swimStates.statesList();
 
-            /** Using lodash */
-            let state = _.find(statesList, function (obj) {
-              /** NOTE: State name must be capitalized. */
-              return obj.state === 'Utah';
-            });
+            console.log('statesList', statesList);
 
-            console.log(JSON.stringify(state));
+            // => [{
+            //   "state": "alabama",
+            //   "bounding_box": {
+            //     "north_latitude": "-84.8882446289062",
+            //     "east_longitude": "35.0080299377441",
+            //     "west_longitude": "30.1375217437744",
+            //     "south_latitude": "-88.4731369018555"
+            //   }
+            // }, {
+            //   "state": "arizona",
+            //   "bounding_box": {
+            //     "north_latitude": "-109.045196533203",
+            //     "east_longitude": "37.0042610168457",
+            //     "west_longitude": "31.3321762084961",
+            //     "south_latitude": "-114.818359375"
+            //   }
+            // }, {
+            //   "state": "arkansas",
+            //   "bounding_box": {
+            //     "north_latitude": "-89.6422424316406",
+            //     "east_longitude": "36.4996032714844",
+            //     "west_longitude": "33.0041046142578",
+            //     "south_latitude": "-94.6178131103516"
+            //  },...];
 
-            // {
-            //   "state": "Utah",
-            //   "boundingbox": [
-            //     ["-114.053932189941", "36.9979667663574"],
-            //     ["-109.041069030762", "42.0013885498047"]
-            //   ]
+          </script>
+
+        </template>
+      </demo-snippet>
+
+
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Return state by name</h3>
+      <demo-snippet>
+        <template>
+
+          <script>
+            let state = swimStates.state('utah');
+
+            console.log('state', state);
+
+            // => {
+            //   "state": "utah",
+            //   "bounding_box": {
+            //     "north_latitude": "-109.041069030762",
+            //     "east_longitude": "42.0013885498047",
+            //     "west_longitude": "36.9979667663574",
+            //     "south_latitude": "-114.053932189941"
+            //   }
             // }
 
           </script>
 
         </template>
       </demo-snippet>
+
+
     </div>
+
   </body>
 </html>
