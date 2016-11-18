@@ -14,13 +14,59 @@
 
     <style is="custom-style" include="demo-pages-shared-styles">
     </style>
+
+    <style>
+      .centered:not([style-scope]):not(.style-scope) {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .info {
+        margin-bottom: 12px;
+      }
+    </style>
   </head>
   <body>
     <div class="vertical-section-container centered">
       <h3>Basic swim-states demo</h3>
       <demo-snippet>
         <template>
+
+          <script>
+            // Below is an object model representing each state
+            let obj_model = {
+              "state": "state name",
+              "boundingbox": [
+                ["west longitude", "south latitude"],
+                ["east longitude", "north latitude"]
+              ]
+            }
+          </script>
+
           <swim-states></swim-states>
+
+          <script>
+            const swimStates = document.querySelector('swim-states');
+            let statesList = swimStates.statesList();
+
+            /** Using lodash */
+            let state = _.find(statesList, function (obj) {
+              /** NOTE: State name must be capitalized. */
+              return obj.state === 'Utah';
+            });
+
+            console.log(JSON.stringify(state));
+
+            // {
+            //   "state": "Utah",
+            //   "boundingbox": [
+            //     ["-114.053932189941", "36.9979667663574"],
+            //     ["-109.041069030762", "42.0013885498047"]
+            //   ]
+            // }
+
+          </script>
+
         </template>
       </demo-snippet>
     </div>

@@ -1,8 +1,12 @@
 <link rel="import" href="../polymer/polymer.html">
+<script src="../lodash/lodash.js"></script>
 
 <!--
 `swim-states`
 List of U.S. States with thier latitude and long.
+
+
+
 
 @demo demo/index.html 
 -->
@@ -14,13 +18,7 @@ List of U.S. States with thier latitude and long.
 
       is: 'swim-states',
 
-      properties: {
-        prop1: {
-          type: String,
-          value: 'swim-states',
-        },
-      },
-
+      /** The bounding box array model is: [[west longitude, south latitude],[east longitude, north latitude]] */
       statesList: function () {
         return [{
           "state": "Alabama",
