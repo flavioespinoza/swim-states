@@ -117,6 +117,7 @@
 
         </template>
       </demo-snippet>
+    </div>
 
       <div class="vertical-section-container centered">
         <h3>Used with Polymer web component</h3>
@@ -126,25 +127,17 @@
 
             <dom-module id="swim-dropdown">
               <template>
-                <style>
-                  :host {
-                    display: block;
-                  }
-                  paper-item {
-                    font-size: 13px;
-                  }
-                </style>
 
-                <paper-dropdown-menu label="{{placeholder}}" no-label-float="true" on-iron-select="_itemSelected">
+                <!-- Needed to generate states list -->
+                <swim-states></swim-states>
+
+                <paper-dropdown-menu label="{{placeholder}}" on-iron-select="_itemSelected">
                   <paper-listbox class="dropdown-content">
                     <template is="dom-repeat" items="{{_statesList}}">
                       <paper-item>{{item.state}}</paper-item>
                     </template>
                   </paper-listbox>
                 </paper-dropdown-menu>
-
-                <!-- Needed to generate states list -->
-                <swim-states></swim-states>
 
               </template>
 
@@ -158,6 +151,7 @@
                   },
 
                   _statesList: function () {
+                    const swimStates = document.querySelector('swim-states');
                     return swimStates.statesList();
                   },
 
