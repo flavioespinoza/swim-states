@@ -3,12 +3,17 @@
 
 <!--
 `swim-states`
-List of U.S. States with thier latitude and long.
+List of U.S. States with their bounding box latitudes and longitudes.
 
+Example:
 
+    //Set swim-states element as JavaScript constant
+    const swimStates = document.querySelector('swim-states');
 
+    //Return complete list of states.
+    let statesList = swimStates.statesList();
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 
 <dom-module id="swim-states">
@@ -18,398 +23,399 @@ List of U.S. States with thier latitude and long.
 
       is: 'swim-states',
 
-      /** The bounding box array model is: [[west longitude, south latitude],[east longitude, north latitude]] */
+      /** Return complete list of states. */
       statesList: function () {
         return [{
           "state": "alabama",
           "bounding_box": {
-            "north_latitude": "-84.8882446289062",
-            "east_longitude": "35.0080299377441",
-            "west_longitude": "30.1375217437744",
-            "south_latitude": "-88.4731369018555"
+            "north_latitude": 35.0080299377441,
+            "east_longitude": -84.8882446289062,
+            "south_latitude": 30.1375217437744,
+            "west_longitude": -88.4731369018555
           }
         }, {
           "state": "arizona",
           "bounding_box": {
-            "north_latitude": "-109.045196533203",
-            "east_longitude": "37.0042610168457",
-            "west_longitude": "31.3321762084961",
-            "south_latitude": "-114.818359375"
+            "north_latitude": 37.0042610168457,
+            "east_longitude": -109.045196533203,
+            "south_latitude": 31.3321762084961,
+            "west_longitude": -114.818359375
           }
         }, {
           "state": "arkansas",
           "bounding_box": {
-            "north_latitude": "-89.6422424316406",
-            "east_longitude": "36.4996032714844",
-            "west_longitude": "33.0041046142578",
-            "south_latitude": "-94.6178131103516"
+            "north_latitude": 36.4996032714844,
+            "east_longitude": -89.6422424316406,
+            "south_latitude": 33.0041046142578,
+            "west_longitude": -94.6178131103516
           }
         }, {
           "state": "california",
           "bounding_box": {
-            "north_latitude": "-114.13077545166",
-            "east_longitude": "42.0095024108887",
-            "west_longitude": "32.5295219421387",
-            "south_latitude": "-124.482009887695"
+            "north_latitude": 42.0095024108887,
+            "east_longitude": -114.13077545166,
+            "south_latitude": 32.5295219421387,
+            "west_longitude": -124.482009887695
           }
         }, {
           "state": "colorado",
           "bounding_box": {
-            "north_latitude": "-102.041580200195",
-            "east_longitude": "41.0023612976074",
-            "west_longitude": "36.9924240112305",
-            "south_latitude": "-109.060256958008"
+            "north_latitude": 41.0023612976074,
+            "east_longitude": -102.041580200195,
+            "south_latitude": 36.9924240112305,
+            "west_longitude": -109.060256958008
           }
         }, {
           "state": "connecticut",
           "bounding_box": {
-            "north_latitude": "-71.7869873046875",
-            "east_longitude": "42.0505905151367",
-            "west_longitude": "40.9667053222656",
-            "south_latitude": "-73.7277755737305"
+            "north_latitude": 42.0505905151367,
+            "east_longitude": -71.7869873046875,
+            "south_latitude": 40.9667053222656,
+            "west_longitude": -73.7277755737305
           }
         }, {
           "state": "delaware",
           "bounding_box": {
-            "north_latitude": "-74.9846343994141",
-            "east_longitude": "39.8394355773926",
-            "west_longitude": "38.4511260986328",
-            "south_latitude": "-75.7890472412109"
+            "north_latitude": 39.8394355773926,
+            "east_longitude": -74.9846343994141,
+            "south_latitude": 38.4511260986328,
+            "west_longitude": -75.7890472412109
           }
         }, {
           "state": "florida",
           "bounding_box": {
-            "north_latitude": "-79.9743041992188",
-            "east_longitude": "31.0009689331055",
-            "west_longitude": "24.3963069915771",
-            "south_latitude": "-87.6349029541016"
+            "north_latitude": 31.0009689331055,
+            "east_longitude": -79.9743041992188,
+            "south_latitude": 24.3963069915771,
+            "west_longitude": -87.6349029541016
           }
         }, {
           "state": "georgia",
           "bounding_box": {
-            "north_latitude": "-80.7514266967773",
-            "east_longitude": "35.0008316040039",
-            "west_longitude": "30.3557567596436",
-            "south_latitude": "-85.6051712036133"
+            "north_latitude": 35.0008316040039,
+            "east_longitude": -80.7514266967773,
+            "south_latitude": 30.3557567596436,
+            "west_longitude": -85.6051712036133
           }
         }, {
           "state": "idaho",
           "bounding_box": {
-            "north_latitude": "-111.043563842773",
-            "east_longitude": "49.000846862793",
-            "west_longitude": "41.9880561828613",
-            "south_latitude": "-117.243034362793"
+            "north_latitude": 49.000846862793,
+            "east_longitude": -111.043563842773,
+            "south_latitude": 41.9880561828613,
+            "west_longitude": -117.243034362793
           }
         }, {
           "state": "illinois",
           "bounding_box": {
-            "north_latitude": "-87.0199203491211",
-            "east_longitude": "42.5083045959473",
-            "west_longitude": "36.9701309204102",
-            "south_latitude": "-91.513053894043"
+            "north_latitude": 42.5083045959473,
+            "east_longitude": -87.0199203491211,
+            "south_latitude": 36.9701309204102,
+            "west_longitude": -91.513053894043
           }
         }, {
           "state": "indiana",
           "bounding_box": {
-            "north_latitude": "-84.7845764160156",
-            "east_longitude": "41.7613716125488",
-            "west_longitude": "37.7717399597168",
-            "south_latitude": "-88.0997085571289"
+            "north_latitude": 41.7613716125488,
+            "east_longitude": -84.7845764160156,
+            "south_latitude": 37.7717399597168,
+            "west_longitude": -88.0997085571289
           }
         }, {
           "state": "iowa",
           "bounding_box": {
-            "north_latitude": "-90.1400604248047",
-            "east_longitude": "43.5011367797852",
-            "west_longitude": "40.3755989074707",
-            "south_latitude": "-96.6397171020508"
+            "north_latitude": 43.5011367797852,
+            "east_longitude": -90.1400604248047,
+            "south_latitude": 40.3755989074707,
+            "west_longitude": -96.6397171020508
           }
         }, {
           "state": "kansas",
           "bounding_box": {
-            "north_latitude": "-94.5882034301758",
-            "east_longitude": "40.0030975341797",
-            "west_longitude": "36.9930801391602",
-            "south_latitude": "-102.0517578125"
+            "north_latitude": 40.0030975341797,
+            "east_longitude": -94.5882034301758,
+            "south_latitude": 36.9930801391602,
+            "west_longitude": -102.0517578125
           }
         }, {
           "state": "kentucky",
           "bounding_box": {
-            "north_latitude": "-81.9645385742188",
-            "east_longitude": "39.1474609375",
-            "west_longitude": "36.4967155456543",
-            "south_latitude": "-89.5715103149414"
+            "north_latitude": 39.1474609375,
+            "east_longitude": -81.9645385742188,
+            "south_latitude": 36.4967155456543,
+            "west_longitude": -89.5715103149414
           }
         }, {
           "state": "louisiana",
           "bounding_box": {
-            "north_latitude": "-88.817008972168",
-            "east_longitude": "33.019458770752",
-            "west_longitude": "28.9210300445557",
-            "south_latitude": "-94.0431518554688"
+            "north_latitude": 33.019458770752,
+            "east_longitude": -88.817008972168,
+            "south_latitude": 28.9210300445557,
+            "west_longitude": -94.0431518554688
           }
         }, {
           "state": "maine",
           "bounding_box": {
-            "north_latitude": "-66.9250717163086",
-            "east_longitude": "47.4598426818848",
-            "west_longitude": "42.9561233520508",
-            "south_latitude": "-71.0841751098633"
+            "north_latitude": 47.4598426818848,
+            "east_longitude": -66.9250717163086,
+            "south_latitude": 42.9561233520508,
+            "west_longitude": -71.0841751098633
           }
         }, {
           "state": "maryland",
           "bounding_box": {
-            "north_latitude": "-75.0395584106445",
-            "east_longitude": "39.7229347229004",
-            "west_longitude": "37.8856391906738",
-            "south_latitude": "-79.4871978759766"
+            "north_latitude": 39.7229347229004,
+            "east_longitude": -75.0395584106445,
+            "south_latitude": 37.8856391906738,
+            "west_longitude": -79.4871978759766
           }
         }, {
           "state": "massachusetts",
           "bounding_box": {
-            "north_latitude": "-69.8615341186523",
-            "east_longitude": "42.8867149353027",
-            "west_longitude": "41.1863288879395",
-            "south_latitude": "-73.5081481933594"
+            "north_latitude": 42.8867149353027,
+            "east_longitude": -69.8615341186523,
+            "south_latitude": 41.1863288879395,
+            "west_longitude": -73.5081481933594
           }
         }, {
           "state": "michigan",
           "bounding_box": {
-            "north_latitude": "-82.122802734375",
-            "east_longitude": "48.3060646057129",
-            "west_longitude": "41.6960868835449",
-            "south_latitude": "-90.4186248779297"
+            "north_latitude": 48.3060646057129,
+            "east_longitude": -82.122802734375,
+            "south_latitude": 41.6960868835449,
+            "west_longitude": -90.4186248779297
           }
         }, {
           "state": "minnesota",
           "bounding_box": {
-            "north_latitude": "-89.4833831787109",
-            "east_longitude": "49.3844909667969",
-            "west_longitude": "43.4994277954102",
-            "south_latitude": "-97.2392654418945"
+            "north_latitude": 49.3844909667969,
+            "east_longitude": -89.4833831787109,
+            "south_latitude": 43.4994277954102,
+            "west_longitude": -97.2392654418945
           }
         }, {
           "state": "mississippi",
           "bounding_box": {
-            "north_latitude": "-88.0980072021484",
-            "east_longitude": "34.9960556030273",
-            "west_longitude": "30.1477890014648",
-            "south_latitude": "-91.6550140380859"
+            "north_latitude": 34.9960556030273,
+            "east_longitude": -88.0980072021484,
+            "south_latitude": 30.1477890014648,
+            "west_longitude": -91.6550140380859
           }
         }, {
           "state": "missouri",
           "bounding_box": {
-            "north_latitude": "-89.0988388061523",
-            "east_longitude": "40.6136360168457",
-            "west_longitude": "35.9956817626953",
-            "south_latitude": "-95.7741470336914"
+            "north_latitude": 40.6136360168457,
+            "east_longitude": -89.0988388061523,
+            "south_latitude": 35.9956817626953,
+            "west_longitude": -95.7741470336914
           }
         }, {
           "state": "montana",
           "bounding_box": {
-            "north_latitude": "-104.039558410645",
-            "east_longitude": "49.0011100769043",
-            "west_longitude": "44.3582191467285",
-            "south_latitude": "-116.050003051758"
+            "north_latitude": 49.0011100769043,
+            "east_longitude": -104.039558410645,
+            "south_latitude": 44.3582191467285,
+            "west_longitude": -116.050003051758
           }
         }, {
           "state": "nebraska",
           "bounding_box": {
-            "north_latitude": "-95.3080520629883",
-            "east_longitude": "43.0017013549805",
-            "west_longitude": "39.9999961853027",
-            "south_latitude": "-104.053520202637"
+            "north_latitude": 43.0017013549805,
+            "east_longitude": -95.3080520629883,
+            "south_latitude": 39.9999961853027,
+            "west_longitude": -104.053520202637
           }
         }, {
           "state": "nevada",
           "bounding_box": {
-            "north_latitude": "-114.039642333984",
-            "east_longitude": "42.0022087097168",
-            "west_longitude": "35.0018730163574",
-            "south_latitude": "-120.005729675293"
+            "north_latitude": 42.0022087097168,
+            "east_longitude": -114.039642333984,
+            "south_latitude": 35.0018730163574,
+            "west_longitude": -120.005729675293
           }
         }, {
           "state": "new hampshire",
           "bounding_box": {
-            "north_latitude": "-70.534065246582",
-            "east_longitude": "45.3057823181152",
-            "west_longitude": "42.6970405578613",
-            "south_latitude": "-72.55712890625"
+            "north_latitude": 45.3057823181152,
+            "east_longitude": -70.534065246582,
+            "south_latitude": 42.6970405578613,
+            "west_longitude": -72.55712890625
           }
         }, {
           "state": "new jersey",
           "bounding_box": {
-            "north_latitude": "-73.8850555419922",
-            "east_longitude": "41.3574256896973",
-            "west_longitude": "38.7887535095215",
-            "south_latitude": "-75.5633926391602"
+            "north_latitude": 41.3574256896973,
+            "east_longitude": -73.8850555419922,
+            "south_latitude": 38.7887535095215,
+            "west_longitude": -75.5633926391602
           }
         }, {
           "state": "new mexico",
           "bounding_box": {
-            "north_latitude": "-103.000862121582",
-            "east_longitude": "37.0001411437988",
-            "west_longitude": "31.3323001861572",
-            "south_latitude": "-109.050178527832"
+            "north_latitude": 37.0001411437988,
+            "east_longitude": -103.000862121582,
+            "south_latitude": 31.3323001861572,
+            "west_longitude": -109.050178527832
           }
         }, {
           "state": "new york",
           "bounding_box": {
-            "north_latitude": "-71.8527069091797",
-            "east_longitude": "45.0158615112305",
-            "west_longitude": "40.4773979187012",
-            "south_latitude": "-79.7625122070312"
+            "north_latitude": 45.0158615112305,
+            "east_longitude": -71.8527069091797,
+            "south_latitude": 40.4773979187012,
+            "west_longitude": -79.7625122070312
           }
         }, {
           "state": "north carolina",
           "bounding_box": {
-            "north_latitude": "-75.4001159667969",
-            "east_longitude": "36.5880393981934",
-            "west_longitude": "33.7528762817383",
-            "south_latitude": "-84.3218765258789"
+            "north_latitude": 36.5880393981934,
+            "east_longitude": -75.4001159667969,
+            "south_latitude": 33.7528762817383,
+            "west_longitude": -84.3218765258789
           }
         }, {
           "state": "north dakota",
           "bounding_box": {
-            "north_latitude": "-96.5543899536133",
-            "east_longitude": "49.0004920959473",
-            "west_longitude": "45.9350357055664",
-            "south_latitude": "-104.049270629883"
+            "north_latitude": 49.0004920959473,
+            "east_longitude": -96.5543899536133,
+            "south_latitude": 45.9350357055664,
+            "west_longitude": -104.049270629883
           }
         }, {
           "state": "ohio",
           "bounding_box": {
-            "north_latitude": "-80.5189895629883",
-            "east_longitude": "42.3232383728027",
-            "west_longitude": "38.4031982421875",
-            "south_latitude": "-84.8203430175781"
+            "north_latitude": 42.3232383728027,
+            "east_longitude": -80.5189895629883,
+            "south_latitude": 38.4031982421875,
+            "west_longitude": -84.8203430175781
           }
         }, {
           "state": "oklahoma",
           "bounding_box": {
-            "north_latitude": "-94.4312133789062",
-            "east_longitude": "37.0021362304688",
-            "west_longitude": "33.6191940307617",
-            "south_latitude": "-103.002571105957"
+            "north_latitude": 37.0021362304688,
+            "east_longitude": -94.4312133789062,
+            "south_latitude": 33.6191940307617,
+            "west_longitude": -103.002571105957
           }
         }, {
           "state": "oregon",
           "bounding_box": {
-            "north_latitude": "-116.463500976562",
-            "east_longitude": "46.2991027832031",
-            "west_longitude": "41.9917907714844",
-            "south_latitude": "-124.703544616699"
+            "north_latitude": 46.2991027832031,
+            "east_longitude": -116.463500976562,
+            "south_latitude": 41.9917907714844,
+            "west_longitude": -124.703544616699
           }
         }, {
           "state": "pennsylvania",
           "bounding_box": {
-            "north_latitude": "-74.6894989013672",
-            "east_longitude": "42.5146903991699",
-            "west_longitude": "39.7197647094727",
-            "south_latitude": "-80.5210876464844"
+            "north_latitude": 42.5146903991699,
+            "east_longitude": -74.6894989013672,
+            "south_latitude": 39.7197647094727,
+            "west_longitude": -80.5210876464844
           }
         }, {
           "state": "rhode island",
           "bounding_box": {
-            "north_latitude": "-71.1204681396484",
-            "east_longitude": "42.018856048584",
-            "west_longitude": "41.055534362793",
-            "south_latitude": "-71.9070053100586"
+            "north_latitude": 42.018856048584,
+            "east_longitude": -71.1204681396484,
+            "south_latitude": 41.055534362793,
+            "west_longitude": -71.9070053100586
           }
         }, {
           "state": "south carolina",
           "bounding_box": {
-            "north_latitude": "-78.4992980957031",
-            "east_longitude": "35.2155418395996",
-            "west_longitude": "32.0333099365234",
-            "south_latitude": "-83.35400390625"
+            "north_latitude": 35.2155418395996,
+            "east_longitude": -78.4992980957031,
+            "south_latitude": 32.0333099365234,
+            "west_longitude": -83.35400390625
           }
         }, {
           "state": "south dakota",
           "bounding_box": {
-            "north_latitude": "-96.4363327026367",
-            "east_longitude": "45.9454536437988",
-            "west_longitude": "42.4798889160156",
-            "south_latitude": "-104.05770111084"
+            "north_latitude": 45.9454536437988,
+            "east_longitude": -96.4363327026367,
+            "south_latitude": 42.4798889160156,
+            "west_longitude": -104.05770111084
           }
         }, {
           "state": "tennessee",
           "bounding_box": {
-            "north_latitude": "-81.6468963623047",
-            "east_longitude": "36.6781196594238",
-            "west_longitude": "34.9829788208008",
-            "south_latitude": "-90.310302734375"
+            "north_latitude": 36.6781196594238,
+            "east_longitude": -81.6468963623047,
+            "south_latitude": 34.9829788208008,
+            "west_longitude": -90.310302734375
           }
         }, {
           "state": "texas",
           "bounding_box": {
-            "north_latitude": "-93.5078201293945",
-            "east_longitude": "36.5007057189941",
-            "west_longitude": "25.8370609283447",
-            "south_latitude": "-106.645652770996"
+            "north_latitude": 36.5007057189941,
+            "east_longitude": -93.5078201293945,
+            "south_latitude": 25.8370609283447,
+            "west_longitude": -106.645652770996
           }
         }, {
           "state": "utah",
           "bounding_box": {
-            "north_latitude": "-109.041069030762",
-            "east_longitude": "42.0013885498047",
-            "west_longitude": "36.9979667663574",
-            "south_latitude": "-114.053932189941"
+            "north_latitude": 42.0013885498047,
+            "east_longitude": -109.041069030762,
+            "south_latitude": 36.9979667663574,
+            "west_longitude": -114.053932189941
           }
         }, {
           "state": "vermont",
           "bounding_box": {
-            "north_latitude": "-71.4653549194336",
-            "east_longitude": "45.0166664123535",
-            "west_longitude": "42.7269325256348",
-            "south_latitude": "-73.437744140625"
+            "north_latitude": 45.0166664123535,
+            "east_longitude": -71.4653549194336,
+            "south_latitude": 42.7269325256348,
+            "west_longitude": -73.437744140625
           }
         }, {
           "state": "virginia",
           "bounding_box": {
-            "north_latitude": "-75.2312240600586",
-            "east_longitude": "39.4660148620605",
-            "west_longitude": "36.5407867431641",
-            "south_latitude": "-83.6754150390625"
+            "north_latitude": 39.4660148620605,
+            "east_longitude": -75.2312240600586,
+            "south_latitude": 36.5407867431641,
+            "west_longitude": -83.6754150390625
           }
         }, {
           "state": "washington",
           "bounding_box": {
-            "north_latitude": "-116.917427062988",
-            "east_longitude": "49.00244140625",
-            "west_longitude": "45.5437202453613",
-            "south_latitude": "-124.836097717285"
+            "north_latitude": 49.00244140625,
+            "east_longitude": -116.917427062988,
+            "south_latitude": 45.5437202453613,
+            "west_longitude": -124.836097717285
           }
         }, {
           "state": "west virginia",
           "bounding_box": {
-            "north_latitude": "-77.7190246582031",
-            "east_longitude": "40.638801574707",
-            "west_longitude": "37.2014808654785",
-            "south_latitude": "-82.6447448730469"
+            "north_latitude": 40.638801574707,
+            "east_longitude": -77.7190246582031,
+            "south_latitude": 37.2014808654785,
+            "west_longitude": -82.6447448730469
           }
         }, {
           "state": "wisconsin",
           "bounding_box": {
-            "north_latitude": "-86.2495422363281",
-            "east_longitude": "47.3025016784668",
-            "west_longitude": "42.491943359375",
-            "south_latitude": "-92.8881149291992"
+            "north_latitude": 47.3025016784668,
+            "east_longitude": -86.2495422363281,
+            "south_latitude": 42.491943359375,
+            "west_longitude": -92.8881149291992
           }
         }, {
           "state": "wyoming",
           "bounding_box": {
-            "north_latitude": "-104.052154541016",
-            "east_longitude": "45.0034217834473",
-            "west_longitude": "40.9948768615723",
-            "south_latitude": "-111.05689239502"
+            "north_latitude": 45.0034217834473,
+            "east_longitude": -104.052154541016,
+            "south_latitude": 40.9948768615723,
+            "west_longitude": -111.05689239502
           }
         }]
       },
 
+      /** Returns specific state by name. */
       stateName: function (state_name) {
         return _.find(statesList, function (obj) {
-          return obj.state === state_name;
+          return obj.state === state_name.toLowerCase();
         });
       }
 
